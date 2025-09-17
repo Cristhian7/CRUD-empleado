@@ -1,7 +1,15 @@
+/**
+*{{url('/empleados')}} - se usa el metodo post para captar los datos del form create */
+/* @csrf es una llave para enviar los datos en la funcion store de create */
+<br>
+<br>
+<br>
 Formulario de creacion de empleados
+<br>
 
-<form action="" method="post" enctype="multipart/form-data">
-    
+<form action="{{url('/empleados')}}" method="post" enctype="multipart/form-data">
+    @csrf 
+
     <label for="Nombre"> Nombre</label>
     <input type="text" name="Nombre: " id="Nombre">
     <br>

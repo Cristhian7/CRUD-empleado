@@ -38,6 +38,8 @@ class EmpleadoController extends Controller
     public function store(Request $request)
     {
         //
+        $datosEmpleados = request()->all(); //se guaran los datos en la variable datosEmppleados del form create
+        return response()->json($datosEmpleados); //presenta los datos en un archivo json
     }
 
     /**
