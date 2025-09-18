@@ -1,6 +1,5 @@
-/**
-*{{url('/empleados')}} - se usa el metodo post para captar los datos del form create */
-/* @csrf es una llave para enviar los datos en la funcion store de create */
+{{-- {{url('/empleados')}} - se usa el metodo post para captar los datos del form create --}}
+{{-- @csrf es una llave para enviar los datos en la funcion store de create --}}
 <br>
 <br>
 <br>
@@ -26,6 +25,7 @@ Formulario de creacion de empleados
     <input type="file" name="Foto" id="Foto">
     <br>
     <label for="Enviar"> Enviar</label>
-    <input type="submit" name="Enviar" id="Enviar">
+    <input type="submit" name="Enviar" id="Enviar"> 
+    {{-- <input type="submit" value="Guardar datos"> --}}
     <br>
 </form>
