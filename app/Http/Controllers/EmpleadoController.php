@@ -40,6 +40,13 @@ class EmpleadoController extends Controller
         //
         //$datosEmpleados = request()->all(); //se guaran los datos en la variable datosEmppleados del form create
         $datosEmpleados = request()->except('_token'); //quitando el valor token
+
+        //Insertar la fotografia como png y uploads, esto esta en store/app/public/uploads para guardarlo en la BD
+        if($request->hasFile('Foto'))
+        {
+            $datosEmpleados['Foto']=$request->file('Foto')->store('uploads','public');
+        }
+
         Empleado::insert($datosEmpleados); //insertar en la base de datos
         return response()->json($datosEmpleados); //presenta los datos en un archivo json
     }
